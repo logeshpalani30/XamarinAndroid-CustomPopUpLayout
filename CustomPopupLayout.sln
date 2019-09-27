@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomPopupLayout", "CustomPopupLayout\CustomPopupLayout.csproj", "{DDDADC13-73C2-404F-A010-E74C435F806E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDDADC13-73C2-404F-A010-E74C435F806E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDDADC13-73C2-404F-A010-E74C435F806E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDDADC13-73C2-404F-A010-E74C435F806E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DDDADC13-73C2-404F-A010-E74C435F806E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDDADC13-73C2-404F-A010-E74C435F806E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDDADC13-73C2-404F-A010-E74C435F806E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {201B9397-A308-4728-B9B9-AB455C7C8467}
+	EndGlobalSection
+EndGlobal
