@@ -1,7 +1,125 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-</RelativeLayout>
+    android:layout_height="wrap_content">
+	            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white">
+                
+                <TextView
+                    android:id="@+id/allocate_collector"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Custom Title"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:maxLines="1"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/patient"
+                    app:layout_constraintTop_toBottomOf="@+id/allocate_collector"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="14dp"
+                    android:text="My Name"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/patient_name"
+                    app:layout_constraintTop_toBottomOf="@+id/patient"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="14dp"
+                    android:text="Logesh Palani"
+                    android:textSize="12dp"
+                    android:textColor="@android:color/black"/>
+
+                <android.support.design.widget.TextInputLayout
+                        android:id="@+id/collector_name_txt_lyt"
+                        app:layout_constraintTop_toBottomOf="@+id/patient_name"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+                      <AutoCompleteTextView  
+                            android:layout_width="match_parent"  
+                            android:layout_height="wrap_content"
+                            android:id="@+id/autocomplete"
+                            android:paddingLeft="18dp"
+                            android:inputType="textAutoComplete"
+                            android:completionThreshold="1"
+                            android:singleLine="true"
+                            android:gravity="bottom"
+                            android:hint="Name"
+                            android:textSize="14dp"
+                            android:paddingRight="20dp"
+                            android:textColor="@android:color/black"/> 
+                    </android.support.design.widget.TextInputLayout>
+
+                <View
+		            android:id="@+id/topview_of_logout"
+		            app:layout_constraintTop_toBottomOf="@+id/collector_name_txt_lyt"
+		            app:layout_constraintStart_toStartOf="parent"
+		            app:layout_constraintEnd_toEndOf="parent"
+		            android:layout_width="match_parent"
+		            android:layout_height="1dp"
+					android:background="#000000"
+                    android:layout_marginTop="30dp"
+		            android:layout_marginLeft="5dp"
+		            android:layout_marginRight="5dp"/>
+
+	            <View
+		            android:id="@+id/midview_of_logout"
+		            app:layout_constraintTop_toBottomOf="@+id/topview_of_logout"
+		            app:layout_constraintStart_toStartOf="parent"
+		            app:layout_constraintEnd_toEndOf="parent"
+		            android:layout_width="1dp"
+		            android:layout_height="37dp"
+		            android:layout_marginTop="2dp"
+		            android:layout_marginLeft="1dp"
+		            android:layout_marginRight="1dp"
+				    android:background="#000000"
+		            android:layout_marginBottom="2dp"/>
+
+	            <Button
+                    android:id="@+id/btnCancel"
+		            app:layout_constraintTop_toBottomOf="@+id/topview_of_logout"
+		            app:layout_constraintStart_toStartOf="parent"
+		            app:layout_constraintEnd_toStartOf="@+id/midview_of_logout"
+		            android:layout_width="0dp"
+		            android:layout_height="43dp"
+				    android:background="@null"
+		            android:text="Cancel"
+                    android:textAllCaps="false"
+		            android:textSize="12dp"
+		            />
+
+	            <Button
+                    android:id="@+id/btnOk"
+		            app:layout_constraintTop_toBottomOf="@+id/topview_of_logout"
+		            app:layout_constraintStart_toEndOf="@+id/midview_of_logout"
+		            app:layout_constraintEnd_toEndOf="parent"
+		            android:layout_width="0dp"
+		            android:layout_height="43dp"
+		            android:text="Confirm"
+		            android:textSize="12dp"
+		            android:textColor="@android:color/black"
+                    android:textAllCaps="false"
+		            android:background="@android:color/white"/>
+
+            </android.support.constraint.ConstraintLayout>
+    </FrameLayout>
