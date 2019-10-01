@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomPopupLayout", "CustomPopupLayout\CustomPopupLayout.csproj", "{DDDADC13-73C2-404F-A010-E74C435F806E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScreenShots", "ScreenShots", "{A9CA585D-4FDE-4F35-B716-2F0B4282C541}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\loges\OneDrive\Documents\Output.gif = C:\Users\loges\OneDrive\Documents\Output.gif
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
