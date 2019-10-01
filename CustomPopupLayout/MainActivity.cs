@@ -13,7 +13,7 @@ namespace CustomPopupLayout
         private Button btnshowPopup;
         private Button btnPopupCancel;
         private Button btnPopOk;
-        private Dialog rescheduleDialog;
+        private Dialog popupDialog;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -21,43 +21,44 @@ namespace CustomPopupLayout
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
             btnshowPopup = FindViewById<Button>(Resource.Id.btnPopup);
-            btnshowPopup.Click += BtnshowPopup_Click; ;
-
+            btnshowPopup.Click += BtnshowPopup_Click;
         }
 
         private void BtnshowPopup_Click(object sender, System.EventArgs e)
         {
-            rescheduleDialog = new Dialog(this);
-            rescheduleDialog.Window.SetTitle("Alert Title");
-            rescheduleDialog.SetContentView(Resource.Layout.activity_main);
-            rescheduleDialog.Window.SetSoftInputMode(SoftInput.AdjustResize);
-            rescheduleDialog.Show();
+            popupDialog = new Dialog(this);
+            popupDialog.SetContentView(Resource.Layout.activity_main);
+            popupDialog.Window.SetSoftInputMode(SoftInput.AdjustResize);
+            popupDialog.Show();
 
             // Some Time Layout width not fit with windows size
             // but Below lines are not necessery
-            rescheduleDialog.Window.SetLayout(LayoutParams.MatchParent, LayoutParams.WrapContent);
-            rescheduleDialog.Window.SetBackgroundDrawableResource(Android.Resource.Color.Transparent);
+            popupDialog.Window.SetLayout(LayoutParams.MatchParent, LayoutParams.WrapContent);
+            popupDialog.Window.SetBackgroundDrawableResource(Android.Resource.Color.Transparent);
 
             // Access Popup layout fields like below
-            btnPopupCancel = rescheduleDialog.FindViewById<Button>(Resource.Id.btnCancel);
-            btnPopOk = rescheduleDialog.FindViewById<Button>(Resource.Id.btnOk);
+            btnPopupCancel = popupDialog.FindViewById<Button>(Resource.Id.btnCancel);
+            btnPopOk = popupDialog.FindViewById<Button>(Resource.Id.btnOk);
 
             // Events for that popup layout
             btnPopupCancel.Click += BtnPopupCancel_Click;
             btnPopOk.Click += BtnPopOk_Click;
 
+            // Some Additional Tips 
+            // Set the dialog Title Property - popupDialog.Window.SetTitle("Alert Title");
+
         }
 
         private void BtnPopOk_Click(object sender, System.EventArgs e)
         {
-            rescheduleDialog.Dismiss();
-            rescheduleDialog.Hide();
+            popupDialog.Dismiss();
+            popupDialog.Hide();
         }
 
         private void BtnPopupCancel_Click(object sender, System.EventArgs e)
         {
-            rescheduleDialog.Dismiss();
-            rescheduleDialog.Hide();
+            popupDialog.Dismiss();
+            popupDialog.Hide();
         }
     }
 }
