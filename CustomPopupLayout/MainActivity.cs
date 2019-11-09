@@ -46,7 +46,6 @@ namespace CustomPopupLayout
 
             // Some Additional Tips 
             // Set the dialog Title Property - popupDialog.Window.SetTitle("Alert Title");
-
         }
 
         private void BtnPopOk_Click(object sender, System.EventArgs e)
